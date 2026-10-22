@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111113">
+    <meta name="description" content="Demonstração de um site de agendamento para barbearia. Dados e imagens ilustrativos.">
+    <title>Demonstração | Site para barbearia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header page-shell">
+        <a class="brand" href="#inicio" aria-label="Barbearia Modelo, início">
+            <span class="brand-mark">BM</span>
+            <span class="brand-name">BARBEARIA MODELO<span>MODELO DEMONSTRATIVO</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a href="#servicos">Serviços</a>
+            <a href="#agendamento">Agendamento</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+        <a class="header-action" href="#agendamento">Testar demonstração <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+        <section class="hero page-shell" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow">Demonstração · site de barbearia</span>
+                <h1>Seu estilo.<br>Seu momento.</h1>
+                <p class="hero-copy">Este é um modelo ilustrativo. Personalize os textos, fotos, endereço e contatos para a sua barbearia.</p>
+                <div class="hero-buttons">
+                    <a class="button" href="#agendamento">Testar formulário <span aria-hidden="true">→</span></a>
+                    <a class="button button-secondary" href="#servicos">Ver exemplo de serviços</a>
+                </div>
+                <div class="rating"><span><small>Prévia de layout · dados fictícios</small></span></div>
+            </div>
+        </section>
+
+        <div class="photo-strip page-shell" aria-label="Imagens ilustrativas de barbearia">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Imagem ilustrativa de corte masculino" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Detalhes de uma barbearia" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Ferramentas de barbearia" loading="lazy">
+        </div>
+
+        <section class="section page-shell" id="servicos">
+            <div class="section-heading">
+                <div><span class="eyebrow">Cuidado no seu estilo</span><h2>Na cadeira, do seu jeito.</h2></div>
+                <p class="section-intro">Serviços de exemplo para demonstrar como a barbearia pode apresentar suas opções.</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=80" alt="Barbeiro fazendo um corte masculino" loading="lazy">
+                    <div class="service-info"><h3>Corte masculino</h3><p>Clássico, degradê ou no seu estilo.</p></div>
+                </article>
+                <article class="service-card">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80" alt="Barbeiro cuidando da barba" loading="lazy">
+                    <div class="service-info"><h3>Barba</h3><p>Acabamento caprichado e personalizado.</p></div>
+                </article>
+                <article class="service-card">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80" alt="Ferramentas profissionais de barbearia" loading="lazy">
+                    <div class="service-info"><h3>Cabelo + barba</h3><p>Um cuidado completo para renovar o visual.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section booking-section" id="agendamento">
+            <div class="page-shell booking-layout">
+                <div class="booking-copy">
+                    <span class="eyebrow">Agendamento demonstrativo</span>
+                    <h2>Seu próximo corte começa aqui.</h2>
+                    <p>Experimente o formulário com dados fictícios. Esta demonstração não envia mensagens nem reserva horários.</p>
+                    <div class="location-card">
+                        <span class="location-icon" aria-hidden="true">⌖</span>
+                        <span><strong>Endereço ilustrativo</strong>Sua rua, 123<br>Sua cidade — UF</span>
+                    </div>
+                </div>
+                <form class="booking-form" id="booking-form">
+                    <div class="field field-full">
+                        <label for="client-name">Nome de exemplo</label>
+                        <input id="client-name" name="name" type="text" autocomplete="off" placeholder="Digite um nome fictício" required>
+                    </div>
+                    <div class="field">
+                        <label for="client-phone">Telefone de exemplo</label>
+                        <input id="client-phone" name="phone" type="tel" autocomplete="off" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="field">
+                        <label for="service">Serviço</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Escolha um serviço</option>
+                            <option>Corte masculino</option>
+                            <option>Barba</option>
+                            <option>Cabelo + barba</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="appointment-date">Data preferida</label>
+                        <input id="appointment-date" name="date" type="date" required>
+                    </div>
+                    <div class="field">
+                        <label for="appointment-time">Horário preferido</label>
+                        <select id="appointment-time" name="time" required>
+                            <option value="" disabled selected>Escolha um horário</option>
+                            <option>09:00</option><option>10:00</option><option>11:00</option>
+                            <option>12:00</option><option>13:00</option><option>14:00</option>
+                            <option>15:00</option><option>16:00</option><option>17:00</option>
+                            <option>18:00</option>
+                        </select>
+                    </div>
+                    <p class="form-note">Demonstração: os dados digitados não são enviados nem armazenados.</p>
+                    <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                    <button class="button" type="submit">Testar formulário <span aria-hidden="true">↗</span></button>
+                </form>
+            </div>
+        </section>
+
+        <section class="section page-shell about-section" id="sobre">
+            <img class="about-image" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80" alt="Imagem ilustrativa do interior de uma barbearia" loading="lazy">
+            <div class="about-copy">
+                <span class="eyebrow">Sobre o exemplo</span>
+                <h2>Tradicional no cuidado. Atual no estilo.</h2>
+                <p>Texto demonstrativo para apresentar a história, o atendimento e o diferencial da sua barbearia. Substitua por informações reais antes de publicar.</p>
+                <div class="details-list">
+                    <span><strong>Avaliação</strong> &nbsp;Espaço para avaliações dos clientes</span>
+                    <span><strong>Endereço</strong> &nbsp;Adicione o endereço do estabelecimento</span>
+                </div>
+                <p class="demo-note">Os links de redes sociais podem ser adicionados quando este modelo for personalizado.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-shell footer-inner">
+            <a class="brand" href="#inicio"><span class="brand-mark">BM</span><span class="brand-name">BARBEARIA MODELO<span>MODELO DEMONSTRATIVO</span></span></a>
+            <span>Endereço e contatos de exemplo</span>
+            <span>© <span id="current-year"></span> Barbearia Modelo · Demonstração</span>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
